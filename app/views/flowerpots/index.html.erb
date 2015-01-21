@@ -1,0 +1,9 @@
+<h1>My Plants!</h1>
+
+<ul>
+<% @flowerpots.each do |pot| %>
+ <li><%= "A #{pot.plant.name} plant with #{pot.plant.flower.color}, #{pot.plant.flower.smell} smelling flowers in a pot made of #{pot.material} that cost $#{pot.cost.round(2)}" %></li>
+
+<% end %>
+</ul>
+<%= link_to "Add another plant", new_flowerpot_path %>
